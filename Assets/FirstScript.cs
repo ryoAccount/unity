@@ -9,8 +9,12 @@ public class FirstScript : MonoBehaviour
   {
     PlayerModel player = new PlayerModel("sora", 100, 0);
     player.LogName();
-    PlayerModel friend = new PlayerModel("hotaru", 100, 0);
-    friend.LogName();
+    player.Name = "geo";
+    // player.LogName();
+    Debug.Log(player.Name);
+
+    // PlayerModel friend = new PlayerModel("hotaru", 100, 0);
+    // friend.LogName();
   }
 
   // Update is called once per frame
