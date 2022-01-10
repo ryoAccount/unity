@@ -62,34 +62,38 @@ public class FirstScript : MonoBehaviour
     // int[] yList = new int[3] { 1, 2, -3 };
     // Debug.Log(xList.Length + yList.Length);
 
-    List<int> numbers = new List<int>() { 1, 2, -3 };
-    Debug.Log(numbers[1]);
-    // change
-    numbers[1] = 4;
-    Debug.Log(numbers[1]);
-    // add
-    numbers.Add(5);
-    Debug.Log(numbers[3]);
-    // count
-    Debug.Log(numbers.Count);
-    // remove
-    // numbers.RemoveAt(1);
-    // numbers.Remove(-3);
-    // Debug.Log(numbers);
+    // List<int> numbers = new List<int>() { 1, 2, -3 };
+    // Debug.Log(numbers[1]);
+    // // change
+    // numbers[1] = 4;
+    // Debug.Log(numbers[1]);
+    // // add
+    // numbers.Add(5);
+    // Debug.Log(numbers[3]);
+    // // count
+    // Debug.Log(numbers.Count);
+    // // remove
+    // // numbers.RemoveAt(1);
+    // // numbers.Remove(-3);
+    // // Debug.Log(numbers);
 
-    List<int> numbers2 = new List<int>();
-    for (int i = 0; i < 100; i++)
-    {
-      numbers2.Add(i);
-    }
-    Debug.Log(numbers2.Count);
-    foreach (int num in numbers2)
-    {
-      if (num % 10 == 0)
-      {
-        Debug.Log(num);
-      }
-    }
+    // List<int> numbers2 = new List<int>();
+    // for (int i = 0; i < 100; i++)
+    // {
+    //   numbers2.Add(i);
+    // }
+    // Debug.Log(numbers2.Count);
+    // foreach (int num in numbers2)
+    // {
+    //   if (num % 10 == 0)
+    //   {
+    //     Debug.Log(num);
+    //   }
+    // }
+
+    Log("1");
+    Log("a");
+    Debug.Log(LogMsg("?"));
 
   }
 
@@ -97,5 +101,15 @@ public class FirstScript : MonoBehaviour
   void Update()
   {
     // Debug.Log("Update");
+  }
+
+  // Original Function
+  void Log(string log)
+  {
+    Debug.Log(log);
+  }
+  string LogMsg(string log)
+  {
+    return "Str :" + log;
   }
 }
