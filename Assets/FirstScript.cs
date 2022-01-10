@@ -34,25 +34,33 @@ public class FirstScript : MonoBehaviour
     //     break;
     // }
 
-    int x = 0;
-    while (x <= 10)
-    {
-      if (x == 3)
-      {
-        x++;
-        continue;
-      }
-      if (x > 7)
-      {
-        break;
-      }
-      Debug.Log(x);
-      x++;
-    }
+    // int x = 0;
+    // while (x <= 10)
+    // {
+    //   if (x == 3)
+    //   {
+    //     x++;
+    //     continue;
+    //   }
+    //   if (x > 7)
+    //   {
+    //     break;
+    //   }
+    //   Debug.Log(x);
+    //   x++;
+    // }
     // for (int y = 0; y <= 10; y++)
     // {
     //   Debug.Log(y);
     // }
+
+    int[] xList = new int[3];
+    xList[0] = 1;
+    xList[1] = 2;
+    xList[2] = -3;
+
+    int[] yList = new int[3] { 1, 2, -3 };
+    Debug.Log(xList.Length + yList.Length);
   }
 
   // Update is called once per frame
