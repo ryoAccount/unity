@@ -91,10 +91,11 @@ public class FirstScript : MonoBehaviour
     //   }
     // }
 
-    Log("1");
-    Log("a");
-    Debug.Log(LogMsg("?"));
+    // Log("1");
+    // Log("a");
+    // Debug.Log(LogMsg("?"));
 
+    Debug.Log(GetNum(1, 50));
   }
 
   // Update is called once per frame
@@ -111,5 +112,15 @@ public class FirstScript : MonoBehaviour
   string LogMsg(string log)
   {
     return "Str :" + log;
+  }
+
+  int GetNum(int x, int y)
+  {
+    int sum = 0;
+    for (; x <= y; x++)
+    {
+      sum += x;
+    }
+    return sum;
   }
 }
