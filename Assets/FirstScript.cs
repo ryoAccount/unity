@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class FirstScript : MonoBehaviour
 {
-  string a = "";
-  int b = 1;
-  float c = 1.2f;
-  bool d = true;
-
   // Start is called before the first frame update
   void Start()
   {
     string say = "Hello world";
+    string name = "rm";
     // const string say = "Hello world const";
-    Debug.Log(say);
+    Debug.Log(say + ":" + name);
+    Debug.Log(string.Format("{0}:{1}", say, name));
+
+    int x = 100;
+    string y = "200";
+    Debug.Log(x + y);
+
   }
 
   // Update is called once per frame
