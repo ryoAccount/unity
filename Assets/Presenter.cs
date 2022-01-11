@@ -6,15 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class Presenter : MonoBehaviour
 {
-  // [SerializeField] TestScript testScript;
-  [SerializeField] Text testText;
-  public void OnClickButton()
+  [SerializeField] Transform parent;
+  [SerializeField] GameObject imagePrefab;
+  void Start()
   {
-    Debug.Log("click");
-    // SceneManager.LoadScene("Main");
-    // image.SetActive(false);
-    // Destroy(image);
-    // testScript.TestText();
-    testText.text = "aaaaaaaaaaaa";
+    // create object
+    GameObject image = Instantiate(imagePrefab);
+
+    // parent
+    image.transform.SetParent(parent, false);
   }
 }
