@@ -10,7 +10,19 @@ public class BattleManager : MonoBehaviour
 
   void Start()
   {
+    // enemy.Attack(player);
+  }
+
+  // attack
+  public void OnAttack()
+  {
     player.Attack(enemy);
+    EnemyTurn();
+  }
+
+  // enemy turn
+  public void EnemyTurn()
+  {
     enemy.Attack(player);
   }
 }
