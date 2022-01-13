@@ -1,6 +1,10 @@
-{
+﻿{
     "files.exclude":
     {
+        "**/.DS_Store":true,
+        "**/.git":true,
+        "**/.gitignore":true,
+        "**/.gitmodules":true,
         "**/*.booproj":true,
         "**/*.pidb":true,
         "**/*.suo":true,
@@ -39,5 +43,14 @@
         "**/*.meta":true,
         "**/*.prefab":true,
         "**/*.unity":true,
+        "build/":true,
+        "Build/":true,
+        "Library/":true,
+        "library/":true,
+        "obj/":true,
+        "Obj/":true,
+        "ProjectSettings/":true,
+        "temp/":true,
+        "Temp/":true
     }
 }
