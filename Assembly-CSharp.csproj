@@ -36,8 +36,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\FirstScript.cs" />
-     <Compile Include="Assets\PlayerModel.cs" />
+     <Compile Include="Assets\Presenter.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
