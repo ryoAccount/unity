@@ -20,5 +20,11 @@ public class UnitManager : MonoBehaviour
   {
     hp -= damage;
     Debug.Log(name + " at " + damage + " damage");
+
+    if (hp < 0)
+    {
+      hp = 0;
+      Debug.Log(name + " is dead");
+    }
   }
 }
