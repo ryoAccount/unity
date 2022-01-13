@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// character manage
 public class UnitManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  // status
+  public int hp;
+  public int at;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  // attack
+  public void Attack(UnitManager target)
+  {
+    target.Damage(at);
+  }
+
+  // damage
+  void Damage(int damage)
+  {
+    hp -= damage;
+    Debug.Log(name + " at " + damage + " damage");
+  }
 }
