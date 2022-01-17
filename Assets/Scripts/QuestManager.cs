@@ -12,15 +12,11 @@ public class QuestManager : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
-    stageUI.UpdateUI(1);
+    stageUI.UpdateUI(0);
   }
 
   public void OnNextButton()
   {
-    currentStage++;
-    // stage UI update
-    stageUI.UpdateUI(currentStage);
-
     if (encounterTable.Length <= currentStage)
     {
       // stage clear
@@ -31,10 +27,14 @@ public class QuestManager : MonoBehaviour
       // enemy encounter
       EncounterEnemy();
     }
+    currentStage++;
+    // stage UI update
+    stageUI.UpdateUI(currentStage);
   }
 
   void EncounterEnemy()
   {
+    stageUI.ShowButtons(false);
     Instantiate(enemyPrefab);
   }
 }
