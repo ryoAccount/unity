@@ -5,6 +5,7 @@ using UnityEngine;
 public class QuestManager : MonoBehaviour
 {
   public StageUIManager stageUI;
+  public GameObject enemyPrefab;
   // enemy encounter
   int[] encounterTable = { -1, -1, 0, -1, 0, -1 };
   int currentStage = 0;
@@ -28,7 +29,12 @@ public class QuestManager : MonoBehaviour
     else if (encounterTable[currentStage] == 0)
     {
       // enemy encounter
-      Debug.Log(1);
+      EncounterEnemy();
     }
+  }
+
+  void EncounterEnemy()
+  {
+    Instantiate(enemyPrefab);
   }
 }

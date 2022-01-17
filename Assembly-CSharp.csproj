@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\QuestManager.cs" />
      <Compile Include="Assets\Scripts\StageUIManager.cs" />
+     <None Include="Assets\Aekashics\Terms of use.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
