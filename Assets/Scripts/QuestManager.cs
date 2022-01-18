@@ -44,4 +44,9 @@ public class QuestManager : MonoBehaviour
 
     battleManager.Setup(enemy);
   }
+
+  public void EndBattle()
+  {
+    stageUI.ShowButtons(true);
+  }
 }

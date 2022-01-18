@@ -10,6 +10,11 @@ public class PlayerManager : MonoBehaviour
   public void Attack(EnemyManager enemy)
   {
     enemy.Damage(at);
+
+    if (hp < 0)
+    {
+      hp = 0;
+    }
   }
 
   public void Damage(int damage)

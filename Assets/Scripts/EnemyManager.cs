@@ -20,7 +20,10 @@ public class EnemyManager : MonoBehaviour
   public void Damage(int damage)
   {
     hp -= damage;
-    Debug.Log(hp);
+    if (hp < 0)
+    {
+      hp = 0;
+    }
   }
 
   // tapAction set function
