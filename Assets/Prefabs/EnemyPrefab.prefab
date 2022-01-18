@@ -152,3 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b746ebe9d7a7b34c9b0384bcabd69e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: Fire Bolt
+  hp: 20
+  at: 5

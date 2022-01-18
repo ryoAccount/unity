@@ -8,17 +8,15 @@ public class BattleManager : MonoBehaviour
   public EnemyUIManager enemyUI;
   public PlayerManager player;
   public EnemyManager enemy;
-  // Start is called before the first frame update
-  void Start()
-  {
-    Setup();
-  }
 
   // initialize
-  void Setup()
+  public void Setup(EnemyManager enemyManager)
   {
+    enemy = enemyManager;
     enemyUI.SetupUI(enemy);
     playerUI.SetupUI(player);
+
+    enemy.AddEventListenerInTap(AttackPlayer);
   }
 
   void AttackPlayer()

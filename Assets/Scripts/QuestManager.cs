@@ -6,9 +6,12 @@ public class QuestManager : MonoBehaviour
 {
   public StageUIManager stageUI;
   public GameObject enemyPrefab;
+  public BattleManager battleManager;
+
   // enemy encounter
   int[] encounterTable = { -1, -1, 0, -1, 0, -1 };
   int currentStage = 0;
+
   // Start is called before the first frame update
   void Start()
   {
@@ -32,9 +35,13 @@ public class QuestManager : MonoBehaviour
     stageUI.UpdateUI(currentStage);
   }
 
+  // enemy object create
   void EncounterEnemy()
   {
     stageUI.ShowButtons(false);
-    Instantiate(enemyPrefab);
+    GameObject enemyObj = Instantiate(enemyPrefab);
+    EnemyManager enemy = enemyObj.GetComponent<EnemyManager>();
+
+    battleManager.Setup(enemy);
   }
 }
