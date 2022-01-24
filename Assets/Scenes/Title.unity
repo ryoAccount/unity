@@ -410,6 +410,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &994517261 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6287207795987323714, guid: 1428ea92b28c4a1418d25d35608cf9db, type: 3}
+  m_PrefabInstance: {fileID: 6287207794917249557}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1023079971
 GameObject:
   m_ObjectHideFlags: 0
@@ -685,7 +690,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1106774362}
         m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
-        m_MethodName: playSE
+        m_MethodName: PlaySE
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -895,6 +900,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6287207795987323714, guid: 1428ea92b28c4a1418d25d35608cf9db, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 686f58733d54c844686961d1d3bab451, type: 3}
     - target: {fileID: 6287207795987323715, guid: 1428ea92b28c4a1418d25d35608cf9db, type: 3}
       propertyPath: m_Name
       value: SoundManager
@@ -943,5 +952,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6287207795987323727, guid: 1428ea92b28c4a1418d25d35608cf9db, type: 3}
+      propertyPath: audioSourceBGM
+      value: 
+      objectReference: {fileID: 994517261}
+    - target: {fileID: 6287207795987323727, guid: 1428ea92b28c4a1418d25d35608cf9db, type: 3}
+      propertyPath: audioClipsBGM.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6287207795987323727, guid: 1428ea92b28c4a1418d25d35608cf9db, type: 3}
+      propertyPath: audioClipsBGM.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 686f58733d54c844686961d1d3bab451, type: 3}
+    - target: {fileID: 6287207795987323727, guid: 1428ea92b28c4a1418d25d35608cf9db, type: 3}
+      propertyPath: audioClipsBGM.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8b15a12730984774593e6a55aa4a0587, type: 3}
+    - target: {fileID: 6287207795987323727, guid: 1428ea92b28c4a1418d25d35608cf9db, type: 3}
+      propertyPath: audioClipsBGM.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b2bf96c7cf16b1b41b646c2c2081bf85, type: 3}
+    - target: {fileID: 6287207795987323727, guid: 1428ea92b28c4a1418d25d35608cf9db, type: 3}
+      propertyPath: audioClipsBGM.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2f6cb59ec3f5a1a44bb40fccb9769457, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1428ea92b28c4a1418d25d35608cf9db, type: 3}
