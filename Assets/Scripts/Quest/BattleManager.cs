@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class BattleManager : MonoBehaviour
 {
@@ -28,6 +29,9 @@ public class BattleManager : MonoBehaviour
     playerUI.SetupUI(player);
 
     enemy.AddEventListenerInTap(AttackPlayer);
+
+    // DOTween
+    // enemy.transform.DOMove(new Vector3(0, 10, 0), 3f);
   }
 
   void AttackPlayer()
