@@ -18,6 +18,8 @@ public class BattleManager : MonoBehaviour
   // initialize
   public void Setup(EnemyManager enemyManager)
   {
+    SoundManager.instance.PlayBGM("Battle");
+
     // enemy encounter
     enemyUI.gameObject.SetActive(true);
 
@@ -30,6 +32,8 @@ public class BattleManager : MonoBehaviour
 
   void AttackPlayer()
   {
+    SoundManager.instance.PlaySE(1);
+
     player.Attack(enemy);
     enemyUI.UpdateUI(enemy);
 
@@ -47,12 +51,15 @@ public class BattleManager : MonoBehaviour
 
   void AttackEnemy()
   {
+    // SoundManager.instance.PlaySE(1);
     enemy.Attack(player);
     playerUI.UpdateUI(player);
   }
 
   void EndBattle()
   {
+    SoundManager.instance.PlayBGM("Quest");
+
     enemyUI.gameObject.SetActive(false);
     questManager.EndBattle();
   }

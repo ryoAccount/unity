@@ -21,6 +21,7 @@ public class QuestManager : MonoBehaviour
 
   public void OnNextButton()
   {
+    SoundManager.instance.PlaySE(0);
     if (encounterTable.Length <= currentStage)
     {
       // stage clear
@@ -55,6 +56,14 @@ public class QuestManager : MonoBehaviour
   {
     // quest clear Animation
     stageUI.ShowClearText();
+
+    SoundManager.instance.StopBGM();
+    SoundManager.instance.PlaySE(2);
     // sceneTransitionManager.LoadTo("Town");
+  }
+
+  public void onToTownButton()
+  {
+    SoundManager.instance.PlaySE(0);
   }
 }

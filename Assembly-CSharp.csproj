@@ -40,11 +40,13 @@
      <Compile Include="Assets\Scripts\Quest\StageUIManager.cs" />
      <Compile Include="Assets\Scripts\Quest\PlayerUIManager.cs" />
      <Compile Include="Assets\Scripts\Quest\PlayerManager.cs" />
+     <Compile Include="Assets\Scripts\SoundManager.cs" />
      <Compile Include="Assets\Scripts\Quest\BattleManager.cs" />
      <Compile Include="Assets\Scripts\SceneTransitionManager.cs" />
      <Compile Include="Assets\Scripts\Quest\EnemyUIManager.cs" />
      <Compile Include="Assets\Scripts\Quest\EnemyManager.cs" />
-     <Compile Include="Assets\Scripts\SoundManager.cs" />
+     <Compile Include="Assets\Scripts\Title\TitleManager.cs" />
+     <Compile Include="Assets\Scripts\Town\TownManager.cs" />
      <None Include="Assets\Aekashics\Terms of use.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>

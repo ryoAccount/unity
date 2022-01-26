@@ -43,7 +43,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 686f58733d54c844686961d1d3bab451, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
@@ -141,14 +141,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1906bd39c8b7e438ede40ad641a1fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSourceBGM: {fileID: 0}
+  audioSourceBGM: {fileID: 6287207795987323714}
   audioClipsBGM:
   - {fileID: 8300000, guid: 686f58733d54c844686961d1d3bab451, type: 3}
   - {fileID: 8300000, guid: 8b15a12730984774593e6a55aa4a0587, type: 3}
   - {fileID: 8300000, guid: b2bf96c7cf16b1b41b646c2c2081bf85, type: 3}
   - {fileID: 8300000, guid: 2f6cb59ec3f5a1a44bb40fccb9769457, type: 3}
   audioSourceSE: {fileID: 6287207795987323714}
-  audioClip: {fileID: 8300000, guid: d3c9258d32361e645be67f4a500b46c9, type: 3}
+  audioClipsSE:
+  - {fileID: 8300000, guid: d3c9258d32361e645be67f4a500b46c9, type: 3}
+  - {fileID: 8300000, guid: 869e2384936c09b4f8e449e0d380290e, type: 3}
+  - {fileID: 8300000, guid: 9f19f33888611b148bdf15440e7765df, type: 3}
 --- !u!82 &6287207795987323724
 AudioSource:
   m_ObjectHideFlags: 0

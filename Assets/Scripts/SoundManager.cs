@@ -25,7 +25,7 @@ public class SoundManager : MonoBehaviour
   public AudioClip[] audioClipsBGM; // 0:Title, 1:Town, 2:Quest, 3:Battle
 
   public AudioSource audioSourceSE;
-  public AudioClip audioClip;
+  public AudioClip[] audioClipsSE;
 
   void Start()
   {
@@ -59,8 +59,13 @@ public class SoundManager : MonoBehaviour
     audioSourceBGM.Play();
   }
 
-  public void PlaySE()
+  public void PlaySE(int index)
   {
-    audioSourceSE.PlayOneShot(audioClip); // play se
+    audioSourceSE.PlayOneShot(audioClipsSE[index]); // play se
+  }
+
+  public void StopBGM()
+  {
+    audioSourceBGM.Stop();
   }
 }
