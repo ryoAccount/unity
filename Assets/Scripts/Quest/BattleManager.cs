@@ -9,7 +9,8 @@ public class BattleManager : MonoBehaviour
   public PlayerUIManager playerUI;
   public EnemyUIManager enemyUI;
   public PlayerManager player;
-  public EnemyManager enemy;
+  public Transform playerDamagePanel;
+  EnemyManager enemy;
 
   private void Start()
   {
@@ -34,6 +35,7 @@ public class BattleManager : MonoBehaviour
     // enemy.transform.DOMove(new Vector3(0, 10, 0), 3f);
   }
 
+  // playerからの攻撃
   void AttackPlayer()
   {
     StopAllCoroutines();
@@ -46,9 +48,7 @@ public class BattleManager : MonoBehaviour
     if (enemy.hp <= 0)
     {
       // battle finish
-      enemyUI.gameObject.SetActive(false);
-      Destroy(enemy.gameObject); // enemy delete
-      EndBattle();
+      StartCoroutine(EndBattle());
     }
     else
     {
@@ -56,6 +56,7 @@ public class BattleManager : MonoBehaviour
     }
   }
 
+  // enemyからの攻撃
   IEnumerator AttackEnemy()
   {
     // coroutine
@@ -63,12 +64,21 @@ public class BattleManager : MonoBehaviour
 
     SoundManager.instance.PlaySE(1);
 
+    // DO Tween
+    playerDamagePanel.DOShakePosition(0.3f, 0.5f);
+
     enemy.Attack(player);
     playerUI.UpdateUI(player);
   }
 
-  void EndBattle()
+  IEnumerator EndBattle()
   {
+    // coroutine
+    yield return new WaitForSeconds(1f);
+
+    enemyUI.gameObject.SetActive(false);
+    Destroy(enemy.gameObject); // enemy delete
+
     SoundManager.instance.PlayBGM("Quest");
 
     questManager.EndBattle();

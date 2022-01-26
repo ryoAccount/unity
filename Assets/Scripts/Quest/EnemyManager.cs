@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using DG.Tweening;
 
 public class EnemyManager : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class EnemyManager : MonoBehaviour
 
   public void Damage(int damage)
   {
+    // DO Tween
+    transform.DOShakePosition(0.5f, 0.5f);
+
     hp -= damage;
     if (hp < 0)
     {
