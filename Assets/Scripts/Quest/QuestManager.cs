@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class QuestManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class QuestManager : MonoBehaviour
   public GameObject enemyPrefab;
   public BattleManager battleManager;
   public SceneTransitionManager sceneTransitionManager;
+  public GameObject questBackGround;
 
   // enemy encounter
   int[] encounterTable = { -1, -1, 0, -1, 0, -1 };
@@ -19,8 +21,19 @@ public class QuestManager : MonoBehaviour
     stageUI.UpdateUI(0);
   }
 
+  // next
   public void OnNextButton()
   {
+    // 背景を拡大→完了後に元に戻す（ダンジョンの奥に進む風のアニメーション）
+    questBackGround.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 1.5f).OnComplete(
+      () => questBackGround.transform.localScale = new Vector3(1f, 1f, 1f)
+    );
+    // 背景のフェードイン/フェードアウト
+    SpriteRenderer questBackGroundSpriteRenderer = questBackGround.GetComponent<SpriteRenderer>();
+    questBackGroundSpriteRenderer.DOFade(0, 1.5f).OnComplete(
+      () => questBackGroundSpriteRenderer.DOFade(1, 0)
+    );
+
     SoundManager.instance.PlaySE(0);
     if (encounterTable.Length <= currentStage)
     {

@@ -582,7 +582,7 @@ MonoBehaviour:
   playerUI: {fileID: 2055297724}
   enemyUI: {fileID: 1901211637}
   player: {fileID: 841359235}
-  enemy: {fileID: 0}
+  playerDamagePanel: {fileID: 519420032}
 --- !u!4 &370660649
 Transform:
   m_ObjectHideFlags: 0
@@ -705,6 +705,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 5168033287711091070, guid: 0a80ff1fbe821e247b7bbbe6a7d7af13, type: 3}
   battleManager: {fileID: 370660648}
   sceneTransitionManager: {fileID: 156067982}
+  questBG: {fileID: 1277999395}
 --- !u!4 &433941481
 Transform:
   m_ObjectHideFlags: 0
@@ -1249,7 +1250,7 @@ GameObject:
   - component: {fileID: 1277999397}
   - component: {fileID: 1277999396}
   m_Layer: 0
-  m_Name: Forest
+  m_Name: QuestBackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
