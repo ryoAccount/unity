@@ -32,6 +32,8 @@ public class BattleManager : MonoBehaviour
 
   void AttackPlayer()
   {
+    StopAllCoroutines();
+
     SoundManager.instance.PlaySE(1);
 
     player.Attack(enemy);
@@ -40,18 +42,23 @@ public class BattleManager : MonoBehaviour
     if (enemy.hp <= 0)
     {
       // battle finish
+      enemyUI.gameObject.SetActive(false);
       Destroy(enemy.gameObject); // enemy delete
       EndBattle();
     }
     else
     {
-      AttackEnemy();
+      StartCoroutine(AttackEnemy());
     }
   }
 
-  void AttackEnemy()
+  IEnumerator AttackEnemy()
   {
-    // SoundManager.instance.PlaySE(1);
+    // coroutine
+    yield return new WaitForSeconds(1.5f);
+
+    SoundManager.instance.PlaySE(1);
+
     enemy.Attack(player);
     playerUI.UpdateUI(player);
   }
@@ -60,7 +67,6 @@ public class BattleManager : MonoBehaviour
   {
     SoundManager.instance.PlayBGM("Quest");
 
-    enemyUI.gameObject.SetActive(false);
     questManager.EndBattle();
   }
 }
