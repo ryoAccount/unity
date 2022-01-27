@@ -24,6 +24,14 @@ public class QuestManager : MonoBehaviour
   // next
   public void OnNextButton()
   {
+    SoundManager.instance.PlaySE(0);
+    stageUI.ShowButtons(false);
+
+    StartCoroutine(Searching());
+  }
+
+  IEnumerator Searching()
+  {
     // 背景を拡大→完了後に元に戻す（ダンジョンの奥に進む風のアニメーション）
     questBackGround.transform.DOScale(new Vector3(1.5f, 1.5f, 1.5f), 1.5f).OnComplete(
       () => questBackGround.transform.localScale = new Vector3(1f, 1f, 1f)
@@ -34,7 +42,8 @@ public class QuestManager : MonoBehaviour
       () => questBackGroundSpriteRenderer.DOFade(1, 0)
     );
 
-    SoundManager.instance.PlaySE(0);
+    yield return new WaitForSeconds(2f);
+
     if (encounterTable.Length <= currentStage)
     {
       // stage clear
@@ -45,6 +54,11 @@ public class QuestManager : MonoBehaviour
       // enemy encounter
       EncounterEnemy();
     }
+    else
+    {
+      stageUI.ShowButtons(true);
+    }
+
     currentStage++;
     // stage UI update
     stageUI.UpdateUI(currentStage);
