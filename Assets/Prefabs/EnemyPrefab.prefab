@@ -155,3 +155,4 @@ MonoBehaviour:
   name: Fire Bolt
   hp: 20
   at: 5
+  hitEffect: {fileID: 7018323645846452048, guid: 03b538eae9655a9418a20fe9c976c306, type: 3}
